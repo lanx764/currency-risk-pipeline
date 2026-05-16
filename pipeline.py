@@ -90,6 +90,9 @@ def main():
     try:
         extractor = CurrencyExtractor(config)
         data = extractor.fetch_rates()
+        print("Raw API response:")
+        print(data)
+        data = extractor.fetch_rates()
     except ExtractionError as e:
         print(e)
         return None
